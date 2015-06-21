@@ -21,6 +21,8 @@
 <div id="page">
     <header id="masthead" class="site-header">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div id="left-buffer" class="visible-lg"></div>
+            <div id="right-buffer" class="visible-lg"></div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="icon-bar"></span>

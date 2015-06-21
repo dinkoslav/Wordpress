@@ -50,18 +50,20 @@
         ?>
         <div class="col-xs-10 col-xs-offset-1">
             <div class="comment-info hidden-xs">
-                <p><span class="glyphicon glyphicon-user"></span> <?php echo (strlen(get_comment_author()) > 20) ? substr(esc_attr(get_comment_author()), 0, 18).'...' : esc_attr(get_comment_author()); ?>
+                <p><span class="glyphicon glyphicon-user"></span> <?php echo strip_tags(strlen(get_comment_author()) > 20) ? substr(esc_attr(get_comment_author()), 0, 18).'...' : esc_attr(get_comment_author()); ?>
                     <span class="comment-time"><?php comment_date('d/m/Y H:i'); ?></span>
                 </p>
             </div>
             <div class="xs-comment comment-info visible-xs">
                 <p>
-                    <div class="col-xs-12"><?php echo (strlen(get_comment_author()) > 20) ? substr(esc_attr(get_comment_author()), 0, 18).'...' : esc_attr(get_comment_author()); ?></div>
+                    <div class="col-xs-12"><?php echo strip_tags(strlen(get_comment_author()) > 20) ? substr(esc_attr(get_comment_author()), 0, 18).'...' : esc_attr(get_comment_author()); ?></div>
                     <div class="col-xs-12"><span class="comment-time"><?php comment_date('d/m/Y H:i'); ?></span></div>
                 </p>
             </div>
             <div class="comment-content">
-                    <?php comment_text(); ?>
+                <p>
+                    <?php echo esc_attr(get_comment_text()); ?>
+                </p>
             </div>
         </div>
     <?php
